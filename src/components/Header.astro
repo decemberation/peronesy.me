@@ -1,0 +1,70 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import ThemeIcon from "./ThemeIcon.astro";
+---
+
+<header>
+  <nav>
+    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <div class="internal-links">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+    </div>
+    <ThemeIcon class="theme-icon" />
+  </nav>
+</header>
+<style>
+  header {
+    margin: 0;
+    padding: 0 1em;
+    background: white;
+    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+  }
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .internal-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  nav a {
+    padding: 1em 0.5em;
+    margin: 0 0.5rem;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: var(--accent);
+  }
+  .theme-icon {
+    margin-left: 2em;
+  }
+
+  /* Dark mode styles */
+  html.dark header {
+    background: var(--dark-gray);
+    box-shadow: 0 2px 8px rgba(var(--gray-light), 5%);
+  }
+  html.dark nav a {
+    color: var(--dark-text);
+  }
+  html.dark nav a.active {
+    border-bottom-color: var(--dark-accent);
+  }
+</style>

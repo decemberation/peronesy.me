@@ -1,0 +1,82 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1em;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1,
+      p {
+        text-align: left; /* Left align the h1 and p tags */
+      }
+      .hero-image {
+        width: 100%;
+      }
+      .hero-image img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+      }
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .illustration {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2em;
+      }
+      .illustration img {
+        width: 450px;
+        height: 450px;
+        margin-left: 1em;
+      }
+      .home-welcome p {
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-left: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="content-wrapper">
+        <div class="home-welcome">
+          <h1>👋 Hello, Outsiders!</h1>
+          <p>
+            Welcome to peronesy's space! I'm an aspiring cybersecurity
+            professional <br />
+            who uses this blog for CTF write-ups and documentation. I hope you find
+            <br />
+            something interesting here!
+          </p>
+        </div>
+
+        <div class="illustration">
+          <img src="/yellow_astronaut.svg" alt="Yastronaut" />
+          <img src="/blue_astronaut.svg" alt="Bastronaut" />
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
