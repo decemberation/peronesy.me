@@ -2,7 +2,7 @@
 title: "Catching Shadows in the Cloud: Building a Honeypot Lab on Azure"
 description: "The Azure Honeypot Lab for detecting and analyzing brute-force attacks using real-world data and Microsoft Sentinel"
 pubDate: "Apr 06 2025"
-heroImage: "/honeypot.jpg"
+heroImage: "/honeypot.png"
 ---
 
 Ever wondered what attackers really do once they get into a system? Honeypots are a powerful way to find out - not by guessing, but by watching. In this project, I’ve built a fully deployable honeypot lab on Microsoft Azure, designed to lure in threat actors and analyze their behavior in a controlled, isolated environment.
